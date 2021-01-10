@@ -1,18 +1,18 @@
 <?php 
 
 $name = "images";
-$root = $_SERVER["DOCUMENT_ROOT"]; // pega o diretório onde se encontra o arquivo
-$dir = $root.'/'.'PHP7'.'/'.'DIR'.'/'.$name.'/';
+// $root = $_SERVER["DOCUMENT_ROOT"]; // pega o diretório onde se encontra o arquivo
+// $name = $root.'/'.'PHP7'.'/'.'DIR'.'/'.$name.'/';
 
-if (!is_dir($dir))
+if (!is_dir($name))
 {
-    mkdir($dir, 0755, true);
+    mkdir($name);
     echo "Diretório $name criado com sucesso!";
 
 } else {
 
-    echo "Já existe o diretório: $name";
+    rmdir($name);
+    echo "Já existe o diretório: $name foi removido";
 }
-
 
 ?>
