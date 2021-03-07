@@ -11,7 +11,6 @@ spl_autoload_register(function($nameClass){
     {
         require_once($filename);
     }
-
 });
 
 ?>

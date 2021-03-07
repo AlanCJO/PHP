@@ -1,7 +1,5 @@
 <?php 
 
-ini_set('error_reporting', E_ALL);
-
 $conn = new PDO("mysql:dbname=mydb;host=db", "root", "toor");
 
 $stmt = $conn->prepare("SELECT * FROM tb_usuarios ORDER BY deslogin");

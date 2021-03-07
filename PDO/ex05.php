@@ -1,8 +1,8 @@
 <?php 
 
-$conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "root");
+$conn = new PDO("mysql:host=db;dbname=mydb", "root", "toor");
 
-$stmt = $conn->prepare("DELETE FROM tb_usuarios WHERE idusuario = :ID");
+$stmt = $conn->prepare("DELETE FROM tb_usuarios WHERE id = :ID");
 
 $id = 8;
 

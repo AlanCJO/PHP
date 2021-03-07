@@ -1,11 +1,11 @@
 <?php 
 
-$conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "root");
+$conn = new PDO("mysql:host=db;dbname=mydb", "root", "toor");
 
 $stmt = $conn->prepare("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD
-                        WHERE idusuario = :ID");
+                        WHERE id = :ID");
 
-$login = "João";
+$login = "Joao";
 $password = "qwerty";
 $id = 8;
 
