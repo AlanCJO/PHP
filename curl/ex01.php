@@ -29,56 +29,7 @@ $data = $data["characters"]["data"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado</title>
-    <style>
-        header h1 {
-            text-align: center;
-            padding-bottom: 20px;
-
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-        }
-
-        body {
-            background-image: url('background-artwork.jpg');
-            background-attachment: fixed;
-            background-position-x: 50%;
-            background-position-y: 50%;
-            background-size: cover;
-
-            padding: 0 60px;
-            height: 100vh;
-            margin: 0;
-
-            color: white;
-            font-size: 18px;
-        }
-
-        div.data {
-            display: grid;
-            width: 95%;
-            grid-auto-rows: 2fr;
-            grid-template-columns: repeat(4, 1fr);          
-
-            padding: 20px;
-            gap: 8px;
-            border-radius: 10px;
-
-            background: rgba(0, 0, 0, 0.4);
-        }
-
-        div.data input {
-            width: 80%;
-            padding: 5px;
-            color: black;
-            font-size: 18px;
-
-        }
-
-        div.data label {
-            font-weight: 700;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="style.css">        
 </head>
 <body>
 
@@ -91,6 +42,8 @@ $data = $data["characters"]["data"];
             <input type="text" value="<?= $value ?>" id=<?=$key?> disabled>
         <?php endforeach ?>
     </div>
+
+    <?php include_once 'model.php' ?>
 
 </body>
 </html>
