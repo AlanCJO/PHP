@@ -11,6 +11,6 @@ imagestring($image, 3, 440, 370, utf8_decode("Concluído em: ".date("d/m/Y")), $
 
 header("content-type: image/jpeg");
 
-imagejpeg($image, "Certificado-".date("Y-m-d").".jpg");
+imagejpeg($image, "Certificado-".date("Y-m-d").".jpg", 10);
 
 imagedestroy($image);
